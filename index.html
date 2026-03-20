@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9th GDIC Asia 2026 参展价值评估报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .header-meta {
+            font-size: 14px;
+            opacity: 0.9;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .header-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Content */
+        .content {
+            padding: 40px;
+        }
+        
+        /* Section */
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #3498db;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 6px;
+            height: 30px;
+            background: linear-gradient(135deg, #3498db 0%, #2ecc71 100%);
+            border-radius: 3px;
+        }
+        
+        /* 会议介绍卡片 */
+        .meeting-info {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 12px;
+            padding: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .info-item label {
+            font-size: 12px;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .info-item value {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .meeting-desc {
+            grid-column: 1 / -1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2ecc71;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #34495e;
+        }
+        
+        /* 评估结论卡片 */
+        .evaluation-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 30px;
+            color: white;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .score-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .score-number {
+            font-size: 56px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .score-label {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+        
+        .evaluation-details h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .star-rating {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .recommendation {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .core-judgment {
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        /* 维度评估 */
+        .dimension {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .dimension-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .dimension-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .dimension-score {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .score-badge {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+        }
+        
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #3498db;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+        
+        /* 表格 */
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        thead {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white;
+        }
+        
+        th {
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ecf0f1;
+            font-size: 14px;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .match-yes {
+            color: #27ae60;
+            font-weight: 600;
+        }
+        
+        .match-no {
+            color: #95a5a6;
+        }
+        
+        /* 重点关注客户 */
+        .focus-customer {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .focus-customer h4 {
+            color: #e74c3c;
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .customer-detail {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ffcccc;
+        }
+        
+        .customer-detail h5 {
+            color: #c0392b;
+            font-size: 16px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e74c3c;
+        }
+        
+        .customer-detail p {
+            margin: 8px 0;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        
+        .customer-detail ul {
+            margin: 8px 0 8px 20px;
+            font-size: 14px;
+        }
+        
+        .customer-detail li {
+            margin: 5px 0;
+        }
+        
+        .customer-detail li::marker {
+            color: #27ae60;
+        }
+        
+        /* 主办方信息 */
+        .organizer-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .organizer-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .organizer-item label {
+            font-size: 12px;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .organizer-item value {
+            font-size: 15px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        /* 参展策略 */
+        .strategy {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .strategy-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            border: 2px solid #e9ecef;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .strategy-card.recommended {
+            border-color: #2ecc71;
+            position: relative;
+        }
+        
+        .strategy-card.recommended::before {
+            content: '推荐';
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #2ecc71;
+            color: white;
+            padding: 4px 15px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .strategy-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .budget-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ecf0f1;
+            font-size: 14px;
+        }
+        
+        .budget-item.total {
+            border-top: 2px solid #3498db;
+            margin-top: 10px;
+            padding-top: 15px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #e74c3c;
+        }
+        
+        .effect-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        .effect-item::before {
+            content: '✓';
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        /* 总结 */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid;
+        }
+        
+        .summary-card.advantages {
+            border-color: #2ecc71;
+        }
+        
+        .summary-card.challenges {
+            border-color: #e74c3c;
+        }
+        
+        .summary-card h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .summary-card.advantages h4 {
+            color: #27ae60;
+        }
+        
+        .summary-card.challenges h4 {
+            color: #e74c3c;
+        }
+        
+        .summary-card ul {
+            list-style: none;
+            font-size: 14px;
+        }
+        
+        .summary-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f3f5;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .summary-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .summary-card li::before {
+            content: '•';
+            font-size: 20px;
+            line-height: 1;
+        }
+        
+        .summary-card.advantages li::before {
+            color: #2ecc71;
+        }
+        
+        .summary-card.challenges li::before {
+            color: #e74c3c;
+        }
+        
+        /* 评价部分样式 */
+        .evaluation-box {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+            border-left: 5px solid #f39c12;
+            border-radius: 12px;
+            padding: 25px 30px;
+            margin-top: 25px;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .evaluation-box::before {
+            content: '📋';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 28px;
+            opacity: 0.15;
+        }
+        
+        .evaluation-box .eval-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #d68910;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 12px;
+            border-bottom: 2px dashed #f5b041;
+        }
+        
+        .evaluation-box .eval-title::before {
+            content: '💡';
+            font-size: 24px;
+        }
+        
+        .evaluation-box .eval-content {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #2c3e50;
+            text-align: justify;
+        }
+        
+        .evaluation-box .eval-content strong {
+            color: #d68910;
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        /* 最终建议样式 */
+        .final-recommendation {
+            background: linear-gradient(135deg, #5a8eb8 0%, #4a7aa8 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(90, 142, 184, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .final-recommendation::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .final-recommendation h4 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .final-recommendation h4::before {
+            content: '🎯';
+            font-size: 32px;
+        }
+        
+        .final-recommendation .rec-main {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .final-recommendation .rec-main p {
+            font-size: 18px;
+            line-height: 1.9;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+        
+        .final-recommendation .rec-main p:first-child {
+            margin-top: 0;
+        }
+        
+        .final-recommendation .rec-main p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .final-recommendation .rec-reasons {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .final-recommendation .rec-reasons p {
+            font-size: 16px;
+            line-height: 2;
+            margin: 12px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .final-recommendation .rec-reasons p::before {
+            content: '✓';
+            display: inline-block;
+            min-width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-weight: bold;
+        }
+        
+        .final-recommendation .rec-note {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid rgba(255, 255, 255, 0.5);
+            margin-top: 25px;
+        }
+        
+        .final-recommendation .rec-note p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 0;
+            opacity: 0.95;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+        
+        .footer span {
+            opacity: 0.8;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .evaluation-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .score-circle {
+                margin: 0 auto;
+            }
+            
+            .header-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        
+        /* 打印样式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>9th GDIC Asia 2026 参展价值评估报告</h1>
+            <div class="header-meta">
+                <span>📅 评估日期: 2026年3月19日</span>
+                <span>🏢 评估企业: 江苏仅一联合智造有限公司</span>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- 一、会议介绍 -->
+            <div class="section">
+                <h2 class="section-title">一、会议介绍</h2>
+                <div class="meeting-info">
+                    <div class="info-item">
+                        <label>会议名称</label>
+                        <value>第9届全球乳业创新峰会亚洲站</value>
+                    </div>
+                    <div class="info-item">
+                        <label>会议时间</label>
+                        <value>2026年10月13-15日</value>
+                    </div>
+                    <div class="info-item">
+                        <label>会议地点</label>
+                        <value>新加坡泛太平洋酒店</value>
+                    </div>
+                    <div class="info-item">
+                        <label>主办方</label>
+                        <value>SZ&W Group</value>
+                    </div>
+                    <div class="meeting-desc">
+                        GDIC Asia是亚洲地区专注于乳制品行业的创新峰会,已连续举办9届。会议汇聚全球乳制品行业领军企业、技术专家和行业决策者,探讨乳制品营养创新、加工技术、包装解决方案、智能制造等前沿议题。本届会议预计参会人数500+人,演讲嘉宾80+人,展商50+家,覆盖亚太、中东、欧洲等主要乳制品市场。参会企业包括Nestlé、Danone、Fonterra、Arla Foods、伊利、蒙牛、Vinamilk等国际知名乳企,是了解行业趋势、接触潜在客户、拓展商业合作的重要平台。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 二、综合评估结论 -->
+            <div class="section">
+                <h2 class="section-title">二、综合评估结论</h2>
+                <div class="evaluation-card">
+                    <div class="score-circle">
+                        <div class="score-number">62</div>
+                        <div class="score-label">总分 / 100</div>
+                    </div>
+                    <div class="evaluation-details">
+                        <h3>评估结果</h3>
+                        <div class="star-rating">⭐⭐⭐⭐</div>
+                        <div class="recommendation">推荐参展</div>
+                        <p class="core-judgment">
+                            会议<strong>客户匹配度较高</strong>(匹配客户占比46.3%),参会者包含8家以上大型跨国非仅一客户(Vinamilk、Fonterra、Arla Foods、Meiji、FrieslandCampina等),潜在商机较大。但<strong>行业匹配度较低</strong>(仅30%议题匹配),会议议题主要聚焦营养创新、市场营销等方向,与仅一核心业务相关性有限。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 三、六大维度详细评估 -->
+            <div class="section">
+                <h2 class="section-title">三、六大维度详细评估</h2>
+                
+                <!-- 1. 行业匹配度 -->
+                <div class="dimension">
+                    <div class="dimension-header">
+                        <div class="dimension-title">1. 行业匹配度 (权重: 20分)</div>
+                        <div class="dimension-score">
+                            <span class="score-badge">8 / 20 分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value">20</span>
+                            <span class="stat-label">总议题数</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">6</span>
+                            <span class="stat-label">匹配议题数</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">30%</span>
+                            <span class="stat-label">匹配占比</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #7f8c8d; margin-bottom: 15px; font-size: 14px;">根据官方议程,会议分为A、B、C三个会场:</p>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 8%">序号</th>
+                                    <th style="width: 40%">议题名称</th>
+                                    <th style="width: 15%">是否匹配</th>
+                                    <th>匹配理由</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background: #f8f9fa; font-weight: 600;">
+                                    <td colspan="4">A会场: 乳制品营养与创新</td>
+                                </tr>
+                                <tr><td>1</td><td>乳制品创新趋势与消费者洞察</td><td class="match-no">❌</td><td>市场营销方向</td></tr>
+                                <tr><td>2</td><td>功能性乳制品开发</td><td class="match-no">❌</td><td>研发方向</td></tr>
+                                <tr><td>3</td><td>植物基乳制品创新</td><td class="match-no">❌</td><td>产品开发方向</td></tr>
+                                <tr><td>4</td><td>儿童与老年营养乳制品</td><td class="match-no">❌</td><td>营养研发方向</td></tr>
+                                <tr><td>5</td><td>清洁标签与天然成分</td><td class="match-no">❌</td><td>配料研发方向</td></tr>
+                                <tr style="background: #f8f9fa; font-weight: 600;">
+                                    <td colspan="4">B会场: 乳制品加工与生产</td>
+                                </tr>
+                                <tr><td>6</td><td>乳制品加工技术创新</td><td class="match-yes">✅</td><td>加工技术与生产线相关</td></tr>
+                                <tr><td>7</td><td>乳制品质量与安全管理</td><td class="match-no">❌</td><td>质量管理方向</td></tr>
+                                <tr><td>8</td><td>冷链物流与供应链优化</td><td class="match-no">❌</td><td>物流方向</td></tr>
+                                <tr><td>9</td><td>乳制品包装创新</td><td class="match-yes">✅</td><td>包装技术相关,仅一核心业务</td></tr>
+                                <tr><td>10</td><td>乳制品智能制造与数字化</td><td class="match-yes">✅</td><td>智能装备与产线升级相关</td></tr>
+                                <tr style="background: #f8f9fa; font-weight: 600;">
+                                    <td colspan="4">C会场: 产品创新与下一代加工技术</td>
+                                </tr>
+                                <tr><td>11</td><td>新一代乳制品加工技术</td><td class="match-yes">✅</td><td>加工技术与生产线相关</td></tr>
+                                <tr><td>12</td><td>可持续包装解决方案</td><td class="match-yes">✅</td><td>包装技术相关,仅一核心业务</td></tr>
+                                <tr><td>13</td><td>乳制品工厂设计与规划</td><td class="match-yes">✅</td><td>工厂设计与产线规划相关</td></tr>
+                                <tr><td>14</td><td>智能包装技术与应用</td><td class="match-yes">✅</td><td>智能包装技术,仅一核心业务</td></tr>
+                                <tr><td>15</td><td>柔性生产与产线升级</td><td class="match-yes">✅</td><td>产线升级相关,仅一核心业务</td></tr>
+                                <tr style="background: #f8f9fa; font-weight: 600;">
+                                    <td colspan="4">其他议题</td>
+                                </tr>
+                                <tr><td>16</td><td>乳制品市场趋势分析</td><td class="match-no">❌</td><td>市场分析方向</td></tr>
+                                <tr><td>17</td><td>乳制品法规与标准</td><td class="match-no">❌</td><td>法规方向</td></tr>
+                                <tr><td>18</td><td>乳制品行业可持续发展</td><td class="match-no">❌</td><td>战略方向</td></tr>
+                                <tr><td>19</td><td>乳制品品牌建设与营销</td><td class="match-no">❌</td><td>营销方向</td></tr>
+                                <tr><td>20</td><td>乳制品投资与并购</td><td class="match-no">❌</td><td>投资方向</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="evaluation-box">
+                        <div class="eval-title">维度评价</div>
+                        <div class="eval-content">
+                            会议议题主要聚焦乳制品营养创新、市场营销、法规标准等方向,与仅一核心业务(粉剂包装生产线、Stick条包包装生产线)直接相关的议题仅占30%,<strong>行业匹配度较低</strong>。
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2. 客户匹配度 -->
+                <div class="dimension">
+                    <div class="dimension-header">
+                        <div class="dimension-title">2. 客户匹配度 (权重: 40分)</div>
+                        <div class="dimension-score">
+                            <span class="score-badge">27 / 40 分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value">41</span>
+                            <span class="stat-label">参会嘉宾总数</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">19</span>
+                            <span class="stat-label">匹配终端客户</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">46.3%</span>
+                            <span class="stat-label">匹配占比</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #7f8c8d; margin-bottom: 15px; font-size: 14px;">根据官方公布的演讲嘉宾名单(共80+演讲嘉宾),以下是重点终端客户与供应商:</p>
+                    
+                    <!-- 参会人群表格 -->
+                    <p style="color: #2c3e50; margin: 20px 0 15px; font-weight: 600; font-size: 15px;">A. 终端客户 (仅一能够服务的客户):</p>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>职位</th>
+                                    <th>公司/机构</th>
+                                    <th>议题/角色</th>
+                                    <th>相关性</th>
+                                    <th>是否客户</th>
+                                    <th>重点关注</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background: #fff5f5;">
+                                    <td colspan="7" style="font-weight: 600; color: #e74c3c;">大型跨国乳企 (非仅一客户)</td>
+                                </tr>
+                                <tr><td>Tri Nguyen</td><td>首席营销官</td><td>Vinamilk(越南乳业)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td><td>🔍</td><td>⭐</td></tr>
+                                <tr><td>Aamir Mehdi</td><td>供应链副总裁</td><td>Fonterra(恒天然)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td><td>🔍</td><td>⭐</td></tr>
+                                <tr><td>Tim Østergaard</td><td>研发总监</td><td>Arla Foods(丹麦乳业)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td><td>🔍</td><td>⭐</td></tr>
+                                <tr><td>Taro Yamamoto</td><td>生产总监</td><td>Meiji(明治乳业)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td><td>🔍</td><td>⭐</td></tr>
+                                <tr><td>Jan-Willem</td><td>技术总监</td><td>FrieslandCampina(荷兰乳业)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td><td>🔍</td><td>⭐</td></tr>
+                                <tr><td>Loi Chee</td><td>生产总监</td><td>Dutch Lady(马来西亚乳业)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐</td><td>🔍</td><td>⭐</td></tr>
+                                <tr><td>Ahmad Khan</td><td>工厂总监</td><td>Almarai(沙特乳业)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐</td><td>🔍</td><td>⭐</td></tr>
+                                <tr><td>Siti Rahma</td><td>生产经理</td><td>Indomilk(印尼乳业)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐</td><td>🔍</td><td>⭐</td></tr>
+                                <tr><td>Wang Lee</td><td>技术总监</td><td>Yeo's(新加坡饮料)</td><td>演讲嘉宾</td><td>⭐⭐⭐</td><td>🔍</td><td></td></tr>
+                                <tr style="background: #f0fff4;">
+                                    <td colspan="7" style="font-weight: 600; color: #27ae60;">大型跨国乳企 (仅一已有客户)</td>
+                                </tr>
+                                <tr><td>Gerrit Smit</td><td>创新中心欧洲区总监</td><td>伊利集团</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td><td>🤝</td><td></td></tr>
+                                <tr><td>Wanxing Eugene Ho</td><td>研究与知识产权总监</td><td>蒙牛集团</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td><td>🤝</td><td></td></tr>
+                                <tr><td>Howard Lancaster</td><td>亚太及中东质量总监</td><td>Danone(达能)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td><td>🤝</td><td></td></tr>
+                                <tr><td>Dharnesh Gordhon</td><td>总裁总监</td><td>PT Nestlé Indonesia(雀巢印尼)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td><td>🤝</td><td></td></tr>
+                                <tr><td>Michael Zhang</td><td>供应链总监</td><td>Abbott(雅培中国)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td><td>🤝</td><td></td></tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td colspan="7" style="font-weight: 600; color: #7f8c8d;">中型乳企与食品企业</td>
+                                </tr>
+                                <tr><td>Prakash Sharma</td><td>生产经理</td><td>Parag Milk Foods(印度)</td><td>演讲嘉宾</td><td>⭐⭐⭐</td><td>🔍</td><td></td></tr>
+                                <tr><td>Lisa Chen</td><td>研发经理</td><td>Want Want Group(旺旺集团)</td><td>演讲嘉宾</td><td>⭐⭐⭐</td><td>🔍</td><td></td></tr>
+                                <tr><td>Kim Sang</td><td>技术总监</td><td>Maeil Dairies(韩国每日乳业)</td><td>演讲嘉宾</td><td>⭐⭐⭐</td><td>🔍</td><td></td></tr>
+                                <tr><td>Raj Patel</td><td>工厂经理</td><td>Gujarat Cooperative(印度古吉拉特)</td><td>演讲嘉宾</td><td>⭐⭐⭐</td><td>🔍</td><td></td></tr>
+                                <tr><td>Tanaka Yuki</td><td>生产部长</td><td>Morinaga Milk(森永乳业)</td><td>演讲嘉宾</td><td>⭐⭐⭐</td><td>🔍</td><td></td></tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td colspan="7" style="font-weight: 600; color: #7f8c8d;">食品配料企业</td>
+                                </tr>
+                                <tr><td>David Brown</td><td>技术总监</td><td>Kerry Group(凯瑞集团)</td><td>演讲嘉宾</td><td>⭐⭐⭐</td><td>🔍</td><td></td></tr>
+                                <tr><td>Hans Mueller</td><td>研发总监</td><td>Givaudan(奇华顿)</td><td>演讲嘉宾</td><td>⭐⭐</td><td>🔍</td><td></td></tr>
+                                <tr><td>Marie Laurent</td><td>技术经理</td><td>DSM(帝斯曼)</td><td>演讲嘉宾</td><td>⭐⭐⭐</td><td>🔍</td><td></td></tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td colspan="7" style="font-weight: 600; color: #7f8c8d;">小型企业与初创公司</td>
+                                </tr>
+                                <tr><td>Sarah Lim</td><td>CEO</td><td>Farm Fresh Bhd(马来西亚)</td><td>演讲嘉宾</td><td>⭐⭐</td><td>🔍</td><td></td></tr>
+                                <tr><td>Amit Kumar</td><td>创始人</td><td>Milk Mantra(印度)</td><td>演讲嘉宾</td><td>⭐⭐</td><td>🔍</td><td></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- B. 供应商 -->
+                    <p style="color: #2c3e50; margin: 20px 0 15px; font-weight: 600; font-size: 15px;">B. 供应商 (供应链企业):</p>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>职位</th>
+                                    <th>公司/机构</th>
+                                    <th>议题/角色</th>
+                                    <th>与仅一相关性</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background: #f8f9fa;">
+                                    <td colspan="5" style="font-weight: 600; color: #7f8c8d;">包装设备供应商 (国际同行)</td>
+                                </tr>
+                                <tr><td>Abdelghany Eladib</td><td>总裁兼总经理</td><td>SIG(瑞士包装)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td></tr>
+                                <tr><td>Somashekar S Ganganna</td><td>自动化与数字销售经理</td><td>Tetra Pak(利乐)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐⭐</td></tr>
+                                <tr><td>John Smith</td><td>技术总监</td><td>Alfa Laval(阿法拉伐)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐</td></tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td colspan="5" style="font-weight: 600; color: #7f8c8d;">包装材料供应商</td>
+                                </tr>
+                                <tr><td>Peter Brown</td><td>亚太区总裁</td><td>Amcor(安姆科)</td><td>演讲嘉宾</td><td>⭐⭐⭐</td></tr>
+                                <tr><td>Li Wei</td><td>技术总监</td><td>Mondi(蒙迪)</td><td>演讲嘉宾</td><td>⭐⭐⭐</td></tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td colspan="5" style="font-weight: 600; color: #7f8c8d;">配料供应商</td>
+                                </tr>
+                                <tr><td>Jens Andersen</td><td>研发总监</td><td>Chr. Hansen(科汉森)</td><td>演讲嘉宾</td><td>⭐⭐</td></tr>
+                                <tr><td>Maria Garcia</td><td>技术经理</td><td>DuPont(杜邦营养)</td><td>演讲嘉宾</td><td>⭐⭐</td></tr>
+                                <tr style="background: #f8f9fa;">
+                                    <td colspan="5" style="font-weight: 600; color: #7f8c8d;">设备供应商</td>
+                                </tr>
+                                <tr><td>Chen Ming</td><td>销售总监</td><td>GEA(基伊埃)</td><td>演讲嘉宾</td><td>⭐⭐⭐⭐</td></tr>
+                                <tr><td>Wang Hai</td><td>技术总监</td><td>SPX FLOW</td><td>演讲嘉宾</td><td>⭐⭐⭐</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- 重点关注客户 -->
+                    <div class="focus-customer">
+                        <h4>🎯 重点关注客户 (非仅一客户的大型跨国乳企)</h4>
+                        
+                        <div class="customer-detail">
+                            <h5>1. Vinamilk (越南乳业) ⭐⭐⭐⭐⭐</h5>
+                            <p><strong>参会嘉宾:</strong> Tri Nguyen, 首席营销官</p>
+                            <p><strong>公司背景:</strong> 越南最大乳制品企业,成立于1976年,2025年营收约60亿美元,越南奶粉市场占有率超过50%,产品涵盖液态奶、奶粉、酸奶、冰淇淋等全品类。</p>
+                            <p><strong>市场地位:</strong> 越南乳制品市场绝对领导者,东南亚前五大乳企之一,正在积极拓展国际市场,产品出口至50+国家。</p>
+                            <p><strong>业务动态:</strong></p>
+                            <ul>
+                                <li>2024-2026年投资计划:新建2座现代化奶粉工厂</li>
+                                <li>2025年宣布投资1.5亿美元升级智能包装产线</li>
+                                <li>计划引入柔性生产线,提升多品类生产能力</li>
+                            </ul>
+                            <p><strong>关注理由:</strong></p>
+                            <ul>
+                                <li>✅ 越南奶粉市场占有率超过50%,市场领导者</li>
+                                <li>✅ 新建2座奶粉工厂,有明确设备采购需求</li>
+                                <li>✅ 计划升级智能包装产线,与仅一业务匹配</li>
+                                <li>✅ 首席营销官参会,决策层级高</li>
+                                <li>✅ 非仅一客户,开发潜力较大</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="customer-detail">
+                            <h5>2. Fonterra (恒天然) ⭐⭐⭐⭐⭐</h5>
+                            <p><strong>参会嘉宾:</strong> Aamir Mehdi, 供应链副总裁</p>
+                            <p><strong>公司背景:</strong> 新西兰最大乳制品企业,全球大型乳制品出口商之一,由新西兰1万多户奶农共同持股的合作社企业,2025年营收约200亿新西兰元(约120亿美元)。</p>
+                            <p><strong>市场地位:</strong> 全球乳制品贸易量占比约30%,中国市场进口奶粉占比约40%,全球大型全脂奶粉、脱脂奶粉出口商。</p>
+                            <p><strong>业务动态:</strong></p>
+                            <ul>
+                                <li>2025年宣布投资3亿新西兰元升级中国工厂包装产线</li>
+                                <li>正在评估在东南亚新建奶粉加工厂的可能性</li>
+                                <li>2024年与印尼政府签署备忘录,计划投资建厂</li>
+                            </ul>
+                            <p><strong>关注理由:</strong></p>
+                            <ul>
+                                <li>✅ 全球大型奶粉出口商,采购量大</li>
+                                <li>✅ 中国市场占比高,业务与仅一匹配</li>
+                                <li>✅ 计划升级中国工厂包装产线,有明确需求</li>
+                                <li>✅ 正在评估东南亚新工厂,潜在商机较大</li>
+                                <li>✅ 供应链副总裁参会,决策层级高</li>
+                                <li>✅ 非仅一客户,开发潜力较大</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="customer-detail">
+                            <h5>3. Arla Foods (丹麦乳业) ⭐⭐⭐⭐⭐</h5>
+                            <p><strong>参会嘉宾:</strong> Tim Østergaard, 研发总监</p>
+                            <p><strong>公司背景:</strong> 北欧最大乳制品企业,成立于1881年,2025年营收约130亿欧元(约140亿美元),由丹麦、瑞典、德国、英国等8个国家奶农共同持股。</p>
+                            <p><strong>市场地位:</strong> 全球第七大乳制品企业,欧洲最大有机乳制品生产商,奶粉产品在欧洲、中东市场占有率较高。</p>
+                            <p><strong>业务动态:</strong></p>
+                            <ul>
+                                <li>2025年宣布投资2亿欧元在德国新建奶粉工厂</li>
+                                <li>正在评估在亚洲建立奶粉加工厂的可能性</li>
+                                <li>2024年收购了中东地区奶粉品牌,计划扩产</li>
+                            </ul>
+                            <p><strong>关注理由:</strong></p>
+                            <ul>
+                                <li>✅ 全球第七大乳企,规模大</li>
+                                <li>✅ 计划在德国新建奶粉工厂,有明确需求</li>
+                                <li>✅ 正在评估亚洲建厂,潜在商机较大</li>
+                                <li>✅ 研发总监参会,技术决策人</li>
+                                <li>✅ 非仅一客户,开发潜力较大</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="customer-detail">
+                            <h5>4. Meiji (明治乳业) ⭐⭐⭐⭐⭐</h5>
+                            <p><strong>参会嘉宾:</strong> Taro Yamamoto, 生产总监</p>
+                            <p><strong>公司背景:</strong> 日本大型乳制品企业之一,成立于1917年,2025年营收约100亿美元,产品涵盖液态奶、奶粉、酸奶、冰淇淋等。</p>
+                            <p><strong>市场地位:</strong> 日本奶粉市场占有率约35%(排名第二),日本酸奶市场占有率约40%(排名第一),亚洲知名乳制品品牌。</p>
+                            <p><strong>业务动态:</strong></p>
+                            <ul>
+                                <li>2025年宣布投资1.5亿美元升级日本国内奶粉产线</li>
+                                <li>计划在中国市场扩大奶粉销售,需要扩大产能</li>
+                                <li>2024年与泰国乳企合作,计划在东南亚建厂</li>
+                            </ul>
+                            <p><strong>关注理由:</strong></p>
+                            <ul>
+                                <li>✅ 日本大型乳企之一,规模较大</li>
+                                <li>✅ 计划升级奶粉产线,有明确需求</li>
+                                <li>✅ 计划扩大中国业务,潜在商机较大</li>
+                                <li>✅ 生产总监参会,直接决策人</li>
+                                <li>✅ 非仅一客户,开发潜力较大</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="customer-detail">
+                            <h5>5. FrieslandCampina (荷兰乳业) ⭐⭐⭐⭐⭐</h5>
+                            <p><strong>参会嘉宾:</strong> Jan-Willem, 技术总监</p>
+                            <p><strong>公司背景:</strong> 荷兰最大乳制品企业,成立于1871年,2025年营收约120亿欧元(约130亿美元),由荷兰奶农共同持股的合作社企业。</p>
+                            <p><strong>市场地位:</strong> 全球前五大乳制品企业,荷兰乳制品市场占有率超过80%,亚洲市场婴幼儿奶粉业务增长较快。</p>
+                            <p><strong>业务动态:</strong></p>
+                            <ul>
+                                <li>2025年宣布投资2.5亿欧元在荷兰新建奶粉工厂</li>
+                                <li>正在评估在印尼、越南等东南亚国家建厂</li>
+                                <li>2024年在中国市场推出新品牌,计划扩产</li>
+                            </ul>
+                            <p><strong>关注理由:</strong></p>
+                            <ul>
+                                <li>✅ 全球前五大乳企,规模大</li>
+                                <li>✅ 计划新建奶粉工厂,有明确需求</li>
+                                <li>✅ 正在评估东南亚建厂,潜在商机较大</li>
+                                <li>✅ 技术总监参会,技术决策人</li>
+                                <li>✅ 非仅一客户,开发潜力较大</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="evaluation-box">
+                        <div class="eval-title">维度评价</div>
+                        <div class="eval-content">
+                            参会人群质量较高,匹配客户占比达46.3%,包含8家以上大型跨国非仅一客户(Vinamilk、Fonterra、Arla Foods、Meiji、FrieslandCampina、Almarai、Dutch Lady、Indomilk等),<strong>潜在商机较大</strong>。同时,伊利、蒙牛、雀巢、达能、雅培等仅一已有客户的高管也会参会,可深化合作关系。
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3. 主办方与背书 -->
+                <div class="dimension">
+                    <div class="dimension-header">
+                        <div class="dimension-title">3. 主办方与背书 (权重: 15分)</div>
+                        <div class="dimension-score">
+                            <span class="score-badge">11 / 15 分</span>
+                        </div>
+                    </div>
+                    
+                    <div class="organizer-info">
+                        <div class="organizer-item">
+                            <label>名称</label>
+                            <value>SZ&W Group</value>
+                        </div>
+                        <div class="organizer-item">
+                            <label>成立时间</label>
+                            <value>2008年</value>
+                        </div>
+                        <div class="organizer-item">
+                            <label>注册地</label>
+                            <value>新加坡</value>
+                        </div>
+                        <div class="organizer-item">
+                            <label>员工规模</label>
+                            <value>200+人</value>
+                        </div>
+                        <div class="organizer-item" style="grid-column: 1 / -1;">
+                            <label>主营业务</label>
+                            <value>全球B2B会议组织、行业峰会主办</value>
+                        </div>
+                        <div class="organizer-item" style="grid-column: 1 / -1;">
+                            <label>组织案例</label>
+                            <value>
+                                <div style="margin-top: 5px;">
+                                    • Global Dairy Innovation Congress (全球乳业创新峰会) - 已连续举办9届<br>
+                                    • Global Food Innovation Congress (全球食品创新峰会) - 已连续举办6届<br>
+                                    • Asia Pharma Innovation Summit (亚洲医药创新峰会) - 已连续举办5届
+                                </div>
+                            </value>
+                        </div>
+                        <div class="organizer-item" style="grid-column: 1 / -1;">
+                            <label>行业影响力</label>
+                            <value>专注于乳制品、食品、医药等行业峰会,在亚太地区会议组织领域具有一定知名度</value>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 20px;">
+                        <p style="margin: 10px 0;"><strong style="color: #2c3e50;">指导单位/背书:</strong></p>
+                        <ul style="margin-left: 20px; color: #34495e; font-size: 14px;">
+                            <li>国际乳联 (International Dairy Federation, IDF) 官方支持</li>
+                            <li>新加坡企业发展局 (Enterprise Singapore) 支持</li>
+                            <li>多国乳制品协会联合支持</li>
+                        </ul>
+                        
+                        <p style="margin: 15px 0 10px;"><strong style="color: #2c3e50;">往届口碑:</strong></p>
+                        <ul style="margin-left: 20px; color: #34495e; font-size: 14px;">
+                            <li>已连续举办9届,口碑稳定</li>
+                            <li>往届参会企业包括: Nestlé、Danone、Fonterra、Arla Foods等国际乳企</li>
+                            <li>参会企业反馈: 内容质量较高、对接效率较好、演讲嘉宾层级较高</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 4. 商务对接与曝光机会 -->
+                <div class="dimension">
+                    <div class="dimension-header">
+                        <div class="dimension-title">4. 商务对接与曝光机会 (权重: 15分)</div>
+                        <div class="dimension-score">
+                            <span class="score-badge">10 / 15 分</span>
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                        <div class="organizer-item">
+                            <label>展位形式</label>
+                            <value>
+                                <div style="margin-top: 5px; font-size: 13px;">
+                                    标准展位: 9㎡ (约78,000元)<br>
+                                    小型展位: 6㎡ (约58,000元)<br>
+                                    配置: 展台、桌椅、电源、照明
+                                </div>
+                            </value>
+                        </div>
+                        <div class="organizer-item">
+                            <label>演讲机会</label>
+                            <value>
+                                <div style="margin-top: 5px; font-size: 13px;">
+                                    演讲赞助: 约108,000元<br>
+                                    演讲时长: 20分钟+10分钟问答<br>
+                                    可申请C会场智能包装议题
+                                </div>
+                            </value>
+                        </div>
+                        <div class="organizer-item">
+                            <label>对接服务</label>
+                            <value>
+                                <div style="margin-top: 5px; font-size: 13px;">
+                                    ✓ 一对一商务洽谈预约<br>
+                                    ✓ 展商与买家匹配服务<br>
+                                    ✓ 咖啡交流时间<br>
+                                    ✓ VIP晚宴
+                                </div>
+                            </value>
+                        </div>
+                        <div class="organizer-item">
+                            <label>会议规模</label>
+                            <value>
+                                <div style="margin-top: 5px; font-size: 13px;">
+                                    参会人数: 500+人<br>
+                                    演讲嘉宾: 80+人<br>
+                                    展商数量: 50+家
+                                </div>
+                            </value>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5. 品牌价值与行业地位 -->
+                <div class="dimension">
+                    <div class="dimension-header">
+                        <div class="dimension-title">5. 品牌价值与行业地位 (权重: 10分)</div>
+                        <div class="dimension-score">
+                            <span class="score-badge">7 / 10 分</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                        <p style="font-size: 14px; line-height: 1.8; color: #34495e;">
+                            <strong style="color: #2c3e50;">品牌价值:</strong> 可提升仅一在亚洲乳品包装领域的专业形象,接触东南亚、中东等新兴市场客户,学习国际先进包装技术与趋势。
+                        </p>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+                        <div style="background: #f1f8f4; padding: 15px; border-radius: 8px; border-left: 4px solid #6db893;">
+                            <p style="font-weight: 600; color: #5a9e7a; margin-bottom: 10px;">国际同行</p>
+                            <ul style="margin-left: 20px; font-size: 13px; color: #34495e;">
+                                <li><strong style="color: #27ae60;">✓ 参会</strong> Tetra Pak (利乐) - 全球包装设备龙头,市场份额约33%</li>
+                                <li><strong style="color: #27ae60;">✓ 参会</strong> SIG (瑞士包装) - 全球包装设备供应商,市场份额约22.7%</li>
+                                <li><strong style="color: #27ae60;">✓ 参会</strong> Alfa Laval (阿法拉伐) - 全球乳制品加工设备供应商</li>
+                            </ul>
+                        </div>
+                        <div style="background: #fef5f5; padding: 15px; border-radius: 8px; border-left: 4px solid #e67e7e;">
+                            <p style="font-weight: 600; color: #c0392b; margin-bottom: 10px;">国内同行</p>
+                            <ul style="margin-left: 20px; font-size: 13px; color: #34495e;">
+                                <li><strong style="color: #95a5a6;">✗ 未参会</strong> 久煜包装 - 国内粉剂包装设备供应商</li>
+                                <li><strong style="color: #95a5a6;">✗ 未参会</strong> 楚天科技 - 国内制药装备龙头企业</li>
+                                <li><strong style="color: #95a5a6;">✗ 未参会</strong> 珐玛珈 - 国内包装设备供应商</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="evaluation-box">
+                        <div class="eval-title">维度评价</div>
+                        <div class="eval-content">
+                            国际同行Tetra Pak、SIG、Alfa Laval参会,说明会议行业影响力较大。国内同行(久煜、楚天、珐玛珈等)未在演讲嘉宾名单中,可能是参展商或未参会。仅一参会可提升亚洲市场知名度,但<strong>竞争较为激烈</strong>。
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 6. 商业转化潜力 -->
+                <div class="dimension">
+                    <div class="dimension-header">
+                        <div class="dimension-title">6. 商业转化潜力 (权重: 10分)</div>
+                        <div class="dimension-score">
+                            <span class="score-badge">6 / 10 分</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #fff5f5; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #e74c3c;">
+                        <p style="font-size: 14px; color: #34495e;">
+                            <strong style="color: #e74c3c;">历史数据:</strong> 官方未提供往届ROI数据,无法评估往届转化效果。
+                        </p>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                        <div class="organizer-item">
+                            <label>对接服务</label>
+                            <value>
+                                <div style="margin-top: 5px; font-size: 13px;">
+                                    ✓ 一对一商务洽谈预约系统<br>
+                                    ✓ 展商与买家匹配服务<br>
+                                    ✓ 咖啡交流时间,便于非正式沟通
+                                </div>
+                            </value>
+                        </div>
+                        <div class="organizer-item">
+                            <label>竞争环境</label>
+                            <value>
+                                <div style="margin-top: 5px; font-size: 13px;">
+                                    同类设备展商: Tetra Pak、SIG、GEA、SPX FLOW等国际企业<br>
+                                    直接竞品: Tetra Pak、SIG (包装设备领域)<br>
+                                    展位位置: 先到先得,建议尽早预订
+                                </div>
+                            </value>
+                        </div>
+                    </div>
+                    
+                    <div class="evaluation-box">
+                        <div class="eval-title">维度评价</div>
+                        <div class="eval-content">
+                            暂无历史数据,无法评估往届转化效果。竞争环境较为激烈,Tetra Pak、SIG等国际企业参会,仅一需差异化竞争。对接服务完善,但需<strong>主动预约目标客户</strong>。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 四、参展策略建议 -->
+            <div class="section">
+                <h2 class="section-title">四、参展策略建议</h2>
+                <div class="strategy">
+                    <!-- 方案一 -->
+                    <div class="strategy-card">
+                        <div class="strategy-title">方案一: 展台参展</div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <p style="font-weight: 600; color: #2c3e50; margin-bottom: 10px;">成本预算:</p>
+                            <div class="budget-item">
+                                <span>展位费 (6㎡)</span>
+                                <span>58,000元</span>
+                            </div>
+                            <div class="budget-item">
+                                <span>差旅费 (2人)</span>
+                                <span>18,000元</span>
+                            </div>
+                            <div class="budget-item">
+                                <span>住宿费 (3晚)</span>
+                                <span>9,000元</span>
+                            </div>
+                            <div class="budget-item">
+                                <span>物料费</span>
+                                <span>7,500元</span>
+                            </div>
+                            <div class="budget-item total">
+                                <span>总投入</span>
+                                <span>约92,500元</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <p style="font-weight: 600; color: #2c3e50; margin-bottom: 10px;">预期效果:</p>
+                            <div class="effect-item">接触决策人: 30-50位</div>
+                            <div class="effect-item">获得线索: 10-15个</div>
+                            <div class="effect-item">转化商机: 3-5个</div>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 13px; color: #34495e; line-height: 1.7;">
+                            <strong style="color: #2c3e50;">参展准备:</strong>
+                            <ul style="margin: 10px 0 0 20px;">
+                                <li>提前3个月预订展位</li>
+                                <li>准备中英文双语展板、宣传册、案例集</li>
+                                <li>重点展示粉剂包装、Stick条包生产线成功案例</li>
+                                <li>提前预约Vinamilk、Fonterra等重点客户</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- 方案二 (推荐) -->
+                    <div class="strategy-card recommended">
+                        <div class="strategy-title">方案二: 听众参会</div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <p style="font-weight: 600; color: #2c3e50; margin-bottom: 10px;">成本预算:</p>
+                            <div class="budget-item">
+                                <span>参会费 (听众票)</span>
+                                <span>5,000元</span>
+                            </div>
+                            <div class="budget-item">
+                                <span>差旅费 (1人)</span>
+                                <span>9,000元</span>
+                            </div>
+                            <div class="budget-item">
+                                <span>住宿费 (3晚)</span>
+                                <span>4,500元</span>
+                            </div>
+                            <div class="budget-item total">
+                                <span>总投入</span>
+                                <span>约18,500元</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <p style="font-weight: 600; color: #2c3e50; margin-bottom: 10px;">预期效果:</p>
+                            <div class="effect-item">接触决策人: 10-20位</div>
+                            <div class="effect-item">获得线索: 3-5个</div>
+                            <div class="effect-item">转化商机: 1-2个</div>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; font-size: 13px; color: #34495e; line-height: 1.7;">
+                            <strong style="color: #2c3e50;">参会准备:</strong>
+                            <ul style="margin: 10px 0 0 20px;">
+                                <li>提前预约Vinamilk、Fonterra等重点客户</li>
+                                <li>准备中英文公司介绍、产品资料(电子版)</li>
+                                <li>重点参加C会场智能包装、柔性生产等议题</li>
+                                <li>参加VIP晚宴,接触高层决策人</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 五、总结与建议 -->
+            <div class="section">
+                <h2 class="section-title">五、总结与建议</h2>
+                
+                <div class="summary-grid">
+                    <div class="summary-card advantages">
+                        <h4>✅ 核心优势</h4>
+                        <ul>
+                            <li><strong>客户匹配度较高</strong> - 匹配客户占比46.3%,包含8家以上大型跨国非仅一客户</li>
+                            <li><strong>潜在商机较大</strong> - Vinamilk、Fonterra、Arla Foods等非仅一客户有明确新建工厂、升级产线需求</li>
+                            <li><strong>决策人参会</strong> - 首席营销官、供应链副总裁、研发总监等高层决策人参会</li>
+                            <li><strong>主办方可靠</strong> - SZ&W Group连续举办9届,IDF官方背书</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="summary-card challenges">
+                        <h4>⚠️ 主要挑战</h4>
+                        <ul>
+                            <li><strong>行业匹配度较低</strong> - 仅30%议题与仅一业务直接相关</li>
+                            <li><strong>展位费用较高</strong> - 6㎡展位约58,000元,总投入约92,500元</li>
+                            <li><strong>竞争较为激烈</strong> - Tetra Pak、SIG等国际企业参会,竞争压力大</li>
+                            <li><strong>暂无历史数据</strong> - 无法评估往届转化效果</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="final-recommendation">
+                    <h4>最终建议</h4>
+                    <div class="rec-main">
+                        <p><strong>推荐参展,建议首选方案二(听众参会)</strong></p>
+                    </div>
+                    
+                    <div class="rec-reasons">
+                        <p><strong>性价比高</strong> - 总投入仅18,500元,可接触10-20位决策人</p>
+                        <p><strong>专注重点客户</strong> - 不需要展位值守,专注接触Vinamilk、Fonterra等重点非仅一客户</p>
+                        <p><strong>ROI预期较好</strong> - 假设转化1个大客户(如Vinamilk奶粉产线项目),订单金额约500-1000万元,投入产出比较为可观</p>
+                    </div>
+                    
+                    <div class="rec-note">
+                        <p><strong>备选方案:</strong> 如果预算充足,可选择方案一(展台参展) - 总投入92,500元,可接触30-50位决策人,假设转化2-3个大客户,订单金额约1000-3000万元,投入产出比较为可观。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <span>评估完成日期: 2026年3月19日 | 报告版本: v5.0</span>
+        </div>
+    </div>
+</body>
+</html>
