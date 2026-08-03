@@ -114,6 +114,15 @@
     "date": "2026-07-08",
     "readTime": 30,
     "prevId": "propak-asia-2026-summary",
+    "nextId": "ai-agent-workbench-sharing"
+  },
+  {
+    "id": "ai-agent-workbench-sharing",
+    "title": "AI Agent 工作台：一种新的工作方式",
+    "category": "其他报告",
+    "date": "2026-08-03",
+    "readTime": 12,
+    "prevId": "apsmi-bali-2026",
     "nextId": null
   }
 ]
