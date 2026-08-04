@@ -7,6 +7,10 @@
   "nextId": null,
   "content": [
     {
+      "type": "html",
+      "html": "<div class=\"data-card data-card--primary\"><h4>参考附件</h4><p>分享案例的需求参考文件：<a href=\"assets/仅一市场情报URS.docx\" download=\"仅一市场情报URS.docx\">下载《仅一市场情报 URS》</a></p></div>"
+    },
+    {
       "type": "h2",
       "text": "一、什么是 AI Agent 工作台"
     },
